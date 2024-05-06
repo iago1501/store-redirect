@@ -1,7 +1,7 @@
 {
   "vendor": "koestore",
   "name": "store-redirect",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.0",
   "title": "Store Redirect",
   "description": "Create a redirect to run when accessing your page",
   "builders": {
