@@ -1,6 +1,6 @@
 import { canUseDOM, useRuntime } from 'vtex.render-runtime'
 
-const APP_LOCATOR = 'vtex.store-redirect'
+const APP_LOCATOR = 'koestore.store-redirect'
 
 function Redirect() {
 
@@ -8,13 +8,9 @@ function Redirect() {
 
   const { urlRedirect } = getSettings(APP_LOCATOR) || {}
 
-  const shouldRedirect = canUseDOM
-  ? navigate(urlRedirect)
-  : null
+  canUseDOM && urlRedirect && navigate({to: urlRedirect})
 
-
-  return shouldRedirect
-
+  return null
 }
 
 export default Redirect
