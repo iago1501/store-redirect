@@ -6,9 +6,9 @@ function Redirect() {
 
   const { getSettings, navigate } = useRuntime()
 
-  const { urlRedirect } = getSettings(APP_LOCATOR) || {}
+  const { settings: { urlRedirect } } = getSettings( APP_LOCATOR ) || {}
 
-  canUseDOM && urlRedirect && navigate({to: urlRedirect})
+  canUseDOM && urlRedirect && navigate( { to: urlRedirect } )
 
   return null
 }
